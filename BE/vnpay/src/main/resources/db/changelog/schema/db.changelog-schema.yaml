@@ -1,0 +1,194 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: system
+      changes:
+        - createTable:
+            tableName: product
+            columns:
+              - column:
+                  name: id
+                  type: INT
+                  autoIncrement: false
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: VARCHAR(255)
+              - column:
+                  name: description
+                  type: VARCHAR(255)
+              - column:
+                  name: price
+                  type: DECIMAL(10, 2)
+              - column:
+                  name: discount
+                  type: INT
+              - column:
+                  name: image
+                  type: VARCHAR(255)
+              - column:
+                  name: available
+                  type: TINYINT(1)
+              - column:
+                  name: created_date
+                  type: TIMESTAMP(6)
+  - changeSet:
+      id: 2
+      author: system
+      changes:
+        - createTable:
+            tableName: payment_method
+            columns:
+              - column:
+                  name: id
+                  type: INT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: VARCHAR(10)
+              - column:
+                  name: vnp_bank_code
+                  type: VARCHAR(10)
+              - column:
+                  name: vnp_bank_tran_no
+                  type: VARCHAR(20)
+              - column:
+                  name: vnp_card_type
+                  type: VARCHAR(10)
+              - column:
+                  name: vnp_order_info
+                  type: VARCHAR(255)
+              - column:
+                  name: vnp_pay_date
+                  type: VARCHAR(20)
+              - column:
+                  name: vnp_response_code
+                  type: VARCHAR(10)
+              - column:
+                  name: vnp_tmn_code
+                  type: VARCHAR(20)
+              - column:
+                  name: vnp_transaction_no
+                  type: VARCHAR(20)
+              - column:
+                  name: vnp_transaction_status
+                  type: VARCHAR(10)
+              - column:
+                  name: vnp_txn_ref
+                  type: VARCHAR(20)
+                  constraints:
+                    unique: true
+              - column:
+                  name: vnp_secure_hash
+                  type: VARCHAR(255)
+              - column:
+                  name: created_date
+                  type: TIMESTAMP(6)
+  - changeSet:
+      id: 3
+      author: system
+      changes:
+        - createTable:
+            tableName: orders
+            columns:
+              - column:
+                  name: id
+                  type: INT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: order_id
+                  type: VARCHAR(10)
+              - column:
+                  name: total_amount
+                  type: DECIMAL(10, 2)
+              - column:
+                  name: status
+                  type: VARCHAR(20)
+              - column:
+                  name: created_date
+                  type: TIMESTAMP(6)
+              - column:
+                  name: payment_method_id
+                  type: INT
+  - changeSet:
+      id: 4
+      author: system
+      changes:
+        - createTable:
+            tableName: order_detail
+            columns:
+              - column:
+                  name: id
+                  type: INT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: order_id
+                  type: INT
+              - column:
+                  name: product_id
+                  type: INT
+              - column:
+                  name: quantity
+                  type: INT
+              - column:
+                  name: created_date
+                  type: TIMESTAMP(6)
+  - changeSet:
+      id: 5
+      author: system
+      changes:
+        - createTable:
+            tableName: wallet
+            columns:
+              - column:
+                  name: id
+                  type: INT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: currency
+                  type: VARCHAR(20)
+              - column:
+                  name: balance
+                  type: DECIMAL(20, 2)
+              - column:
+                  name: created_date
+                  type: TIMESTAMP(6)
+  - changeSet:
+      id: 6
+      author: system
+      changes:
+        - addForeignKeyConstraint:
+            baseTableName: orders
+            baseColumnNames: payment_method_id
+            referencedTableName: payment_method
+            referencedColumnNames: id
+            constraintName: fk_orders_payment_method
+  - changeSet:
+      id: 7
+      author: system
+      changes:
+        - addForeignKeyConstraint:
+            baseTableName: order_detail
+            baseColumnNames: order_id
+            referencedTableName: orders
+            referencedColumnNames: id
+            constraintName: fk_order_detail_order
+  - changeSet:
+      id: 8
+      author: system
+      changes:
+        - addForeignKeyConstraint:
+            baseTableName: order_detail
+            baseColumnNames: product_id
+            referencedTableName: product
+            referencedColumnNames: id
+            constraintName: fk_order_detail_product

@@ -1,0 +1,39 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: vnpay
+
+  datasource:
+    url: jdbc:h2:mem:vnpaydb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: 123
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate.format_sql: false
+    database-platform: org.hibernate.dialect.H2Dialect
+
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/db.changelog-master.yaml
+    contexts: dev, test
+    drop-first: false
+
+vnp:
+  payUrl: "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html"
+  tmnCode: "MWUARTJ0"
+  hashSecret: "IHXVPVQBXSZUEAEBWQNYLTKVQXKWNHSZ"
+  version: "2.1.0"
+  commandPay: "pay"
+  commandToken: "token_create"

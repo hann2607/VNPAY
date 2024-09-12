@@ -1,0 +1,30 @@
+{
+    "cart": {
+        "title": "Cart",
+        "items": "Items",
+        "fees": "Yes there's no other or hidden fees.",
+        "quantity": "Items"
+    },
+    "errorPage": {
+        "title": "We're sorry!",
+        "subTitle": "Payment could not be processed",
+        "content": "You will be redirected to the wallet shortly or click here to return to wallet"
+    },
+    "successPage": {
+        "title": "Thank you!",
+        "subTitle": "Payment done successfully",
+        "content": "You will be redirected to the wallet shortly or click here to return to wallet"
+    },
+    "wallet": {
+        "title": "Available Balance",
+        "lastOrder": "Last Order"
+    },
+    "button": {
+        "remove": "Remove",
+        "checkout": "Checkout",
+        "wallet": "Wallet",
+        "order": "Order Now",
+        "payment": "Payment"
+    },
+    "language": "Language"
+}

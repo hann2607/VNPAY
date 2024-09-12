@@ -1,0 +1,14 @@
+{
+    "error": {
+        "required": "Trường này là bắt buộc!",
+        "length": "Độ dài không hợp lệ!",
+        "product": {
+            "not-found": "Không tìm thấy sản phẩm!"
+        },
+        "wallet": {
+            "not-found": "Không tìm thấy ví!"
+        },
+        "badRequest": "Yêu cầu không hợp lệ. Vui lòng kiểm tra lại dữ liệu đầu vào!",
+        "unknown": "Đã xảy ra lỗi không xác định!"
+    }
+}

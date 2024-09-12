@@ -1,0 +1,107 @@
+databaseChangeLog:
+  - changeSet:
+      id: 9
+      author: system
+      changes:
+        - insert:
+            tableName: product
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: name
+                  value: "Assassins Creed"
+              - column:
+                  name: description
+                  value: "Description for Product Assassins Creed"
+              - column:
+                  name: available
+                  value: 1
+              - column:
+                  name: price
+                  value: 30000
+              - column:
+                  name: discount
+                  value: 5
+              - column:
+                  name: image
+                  value: "https://i.pinimg.com/originals/8f/ef/46/8fef46c64fe846ac995e812de6b40776.jpg"
+              - column:
+                  name: created_date
+                  valueDate: "2024-08-23T00:00:00"
+
+        - insert:
+            tableName: product
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: name
+                  value: "The Witcher Wild Hunt"
+              - column:
+                  name: description
+                  value: "Description for Product The Witcher Wild Hunt"
+              - column:
+                  name: available
+                  value: 1
+              - column:
+                  name: price
+                  value: 50000
+              - column:
+                  name: discount
+                  value: 10
+              - column:
+                  name: image
+                  value: "https://wallpaperaccess.com/full/158936.jpg"
+              - column:
+                  name: created_date
+                  valueDate: "2024-08-23T00:00:00"
+
+        - insert:
+            tableName: product
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: name
+                  value: "Airborne"
+              - column:
+                  name: description
+                  value: "Description for Product Airborne"
+              - column:
+                  name: available
+                  value: 1
+              - column:
+                  name: price
+                  value: 70000
+              - column:
+                  name: discount
+                  value: 13
+              - column:
+                  name: image
+                  value: "https://images5.alphacoders.com/134/1341494.jpeg"
+              - column:
+                  name: created_date
+                  valueDate: "2024-08-23T00:00:00"
+  - changeSet:
+      id: 14
+      author: system
+      changes:
+        - insert:
+            tableName: wallet
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: currency
+                  value: "VND"
+              - column:
+                  name: balance
+                  value: 100000000
+              - column:
+                  name: created_date
+                  valueDate: "2024-08-24T13:47:43.647Z"

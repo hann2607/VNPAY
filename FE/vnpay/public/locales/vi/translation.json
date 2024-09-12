@@ -1,0 +1,30 @@
+{
+    "cart": {
+        "title": "Giỏ hàng",
+        "items": "Sản phẩm",
+        "fees": "Không có chi phí ẩn hoặc phụ phí nào khác.",
+        "quantity": "Số Lượng"
+    },
+    "errorPage": {
+        "title": "Chúng tôi xin lỗi!",
+        "subTitle": "Thanh toán không thành công",
+        "content": "Bạn sẽ được chuyển hướng đến ví ngay sau đây hoặc nhấn vào đây để quay lại ví"
+    },
+    "successPage": {
+        "title": "Cảm ơn bạn!",
+        "subTitle": "Thanh toán thành công",
+        "content": "Bạn sẽ được chuyển hướng đến ví ngay sau đây hoặc nhấn vào đây để quay lại ví"
+    },
+    "wallet": {
+        "title": "Số dư khả dụng",
+        "lastOrder": "Đơn hàng gần đây"
+    },
+    "button": {
+        "remove": "Xóa",
+        "checkout": "Thanh toán",
+        "wallet": "Ví",
+        "order": "Đặt hàng ngay",
+        "payment": "Thanh toán"
+    },
+    "language": "Ngôn ngữ"
+}

@@ -1,0 +1,14 @@
+{
+    "error": {
+        "required": "This field is required!",
+        "length": "Invalid length!",
+        "product": {
+            "not-found": "Product not found!"
+        },
+        "wallet": {
+            "not-found": "Wallet not found!"
+        },
+        "badRequest": "Bad request. Please check your input!",
+        "unknown": "An unknown error occurred!"
+    }
+}
