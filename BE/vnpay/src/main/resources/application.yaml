@@ -32,8 +32,8 @@ spring:
 
 vnp:
   payUrl: "https://sandbox.vnpayment.vn/paymentv2/vpcpay.html"
-  tmnCode: "MWUARTJ0"
-  hashSecret: "IHXVPVQBXSZUEAEBWQNYLTKVQXKWNHSZ"
+  tmnCode: "ENTER_YOUR_KEY"
+  hashSecret: "ENTER_YOUR_KEY"
   version: "2.1.0"
   commandPay: "pay"
   commandToken: "token_create"
